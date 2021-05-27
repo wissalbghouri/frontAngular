@@ -1,0 +1,74 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <i class="material-icons">business</i>
+              </div>
+              <h4 class="card-title">Ajouter Un Appelle D'offre
+              
+              </h4>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="email"   value="Titre" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  
+                 
+                </div>
+                <div class="row">
+                  
+                </div>
+                <div class="row">
+                    <div class="col-md-8 mr-auto">
+                  
+                    <mat-form-field >
+                        
+                        <input matInput [matDatepicker]="picker" placeholder="Date de dèbut d'Appelle d'offre" (click)="picker.open()">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field></div>
+                  
+                </div>
+                <div class="row">
+                    <div class="col-md-8 mr-auto">
+                  
+                    <mat-form-field >
+                        <input matInput [matDatepicker]="picker" placeholder="Date de fin d'Appelle d'offre" (click)="picker.open()">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field></div>
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <div class="form-group">
+                        <label class="bmd-label-floating"> Description:</label>
+                        <textarea class="form-control"  rows="5"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button mat-raised-button type="submit" class="btn btn-rose pull-right">Ajouter</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  

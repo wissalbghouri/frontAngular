@@ -1,0 +1,249 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 mr-auto ml-auto">
+        <!--      Wizard container        -->
+        <div class="wizard-container">
+          <div class="card card-wizard" data-color="rose" id="wizardProfile">
+            <form #editp="ngForm" (ngSubmit)="editProfil(editp)">
+              <!--        You can switch " data-color="primary" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+              <div class="card-header text-center">
+                <h3 class="card-title">
+                  Compléter Votre Profile
+                </h3>
+                <h5 class="card-description">Ces informations nous permettront d'en savoir plus sur vous.</h5>
+              </div>
+              <div class="wizard-navigation">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#about" data-toggle="tab" role="tab">
+                      À Propos
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#account" data-toggle="tab" role="tab">
+                     information
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#address" data-toggle="tab" role="tab">
+                      Domaine
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="about">
+                    <h5 class="info-text"> Commençons par les informations de base </h5>
+                    <div class="row justify-content-center">
+                      <div class=" col-sm-4">
+                        <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail img-circle">
+                                <img src="./assets/img/placeholder.jpg" alt="...">
+                                
+                            </div>
+                            <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+                            <div>
+                                <span class="btn btn-round btn-rose btn-file">
+                                    <span class="fileinput-new">Ajouter Photo</span>
+                                    <span class="fileinput-exists">Changer</span>
+                                    <input type="file" name="..." name="logo" #logo="ngModel" ngModel  />
+                                </span>
+                                <br />
+                                <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Supprimer</a>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-sm-6">
+                        <div class="input-group form-control-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">business</i>
+                            </span>
+                          </div>
+                         
+                            <mat-form-field class="example-full-width">
+                              <input matInput type="text" placeholder="Nom de l'entreprise" 
+                              
+                              name="nomEnp" #nomEnp="ngModel" ngModel 
+                              [(value)]=user.nomEnp
+                               
+                              >
+                              
+                            </mat-form-field>
+                          
+                        </div>
+                        <div class="input-group form-control-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">record_voice_over</i>
+                            </span>
+                          </div>
+                          <mat-form-field class="example-full-width">
+                            <input matInput type="text" 
+                            
+                            name="login" #login="ngModel" ngModel 
+                            placeholder="Responsable"
+                             [(value)]=user.login
+                                 >
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="col-lg-10 mt-3">
+                        <div class="input-group form-control-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">email</i>
+                            </span>
+                          </div>
+                          <mat-form-field class="example-full-width">
+                             <input matInput placeholder="Email " 
+
+                             name="email" #email="ngModel" ngModel 
+                               type="email"[(value)]=user.email  
+                                >
+                           </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="account">
+                    <h5 class="info-text"> informations Général </h5>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-10">
+                        <div class="row">
+                          <div class="input-group form-control-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="material-icons">home</i>
+                              </span>
+                            </div>
+                            <mat-form-field class="example-full-width has-label" [ngClass]="displayFieldCss(type, 'lastName')">
+                              <input type="text"
+                              name="adresse" #adresse="ngModel" ngModel 
+                              matInput
+                              id="text"
+                              placeholder="Adresse"
+                              
+                              >
+                            </mat-form-field>
+                          </div>
+                          <div class="input-group form-control-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="material-icons">language</i>
+                              </span>
+                            </div>
+                            <mat-form-field class="example-full-width has-label" [ngClass]="displayFieldCss(type, 'lastName')">
+                              <input type="text"
+                              name="siteweb" #siteweb="ngModel" ngModel 
+                              
+                              matInput
+                              id="text"
+                              placeholder="Site Web"
+                             
+                             >
+                            </mat-form-field>
+                          </div>
+                          <div class="input-group form-control-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="material-icons">settings_phone</i>
+                              </span>
+                            </div>
+                            <mat-form-field class="example-full-width has-label" [ngClass]="displayFieldCss(type, 'lastName')">
+                              <input type="number"
+                              name="numtel" #numtel="ngModel" ngModel
+                              
+                              matInput
+                              id="text"
+                              placeholder="Numéro dee télèphone"
+                              
+                             >
+                            </mat-form-field>
+                          </div>
+                         
+                          
+                         
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="address">
+                    <div class="row justify-content-center">
+                      <div class="col-sm-12">
+                        <h5 class="info-text"> informations Général </h5>
+                      </div>
+                      <div class="input-group form-control-lg">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">work_outline</i>
+                          </span>
+                        </div>
+                        <mat-form-field class="example-full-width has-label" [ngClass]="displayFieldCss(type, 'lastName')">
+                          <input type="text"
+                          name="domaineAct" #domaineAct="ngModel" ngModel
+                          matInput
+                          id="text"
+                          [(value)]=user.domaineAct 
+                          placeholder="Domaine d'activiter"
+                           
+                          
+                          >
+                        </mat-form-field>
+                      </div>
+                      <div class="input-group form-control-lg">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">category</i>
+                          </span>
+                        </div>
+                        <mat-form-field class="example-full-width has-label" [ngClass]="displayFieldCss(type, 'lastName')">
+                          <input type="text"
+                          name="categorie" #categorie="ngModel" ngModel
+                         
+                          matInput
+                          id="text"
+                          placeholder="Catègorie"
+                         
+                          >
+                        </mat-form-field>
+                      </div>
+                      
+                     
+                      <div class="col-sm-5">
+                       
+                          <mat-form-field>
+                              <mat-select placeholder="Type d'entreprise" 
+                              name="type_enp" #type_enp="ngModel" ngModel 
+                               >
+                                <mat-option *ngFor="let city of cities" [value]="city.value">
+                                  {{ city.viewValue }}
+                                </mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="mr-auto">
+                  <input type="button" class="btn btn-previous btn-fill btn-default btn-wd disabled" name="Précédent" value="Précédent">
+                </div>
+                <div class="ml-auto">
+                  <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" value="Suivant">
+                  <input type="submit" class="btn btn-finish btn-fill btn-rose btn-wd" name="finish" value="Terminer" style="display: none;">
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- wizard container -->
+      </div>
+    </div>
+  </div>
+</div>

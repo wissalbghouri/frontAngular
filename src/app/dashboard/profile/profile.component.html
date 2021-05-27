@@ -1,0 +1,132 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <i class="material-icons">business</i>
+              </div>
+              <h4 class="card-title" class="text-dark">Bienvenu -
+                <small class="category" class="text-dark">Au Salon Des Entreprises</small>
+              </h4>
+            </div>
+            <div class="card-body">
+              
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="form-group">
+                     
+                      <label class="bmd-label-floating"> <b class="text-info">Nom de l'entreprise :</b></label>
+                      <label class="text-danger">{{ user.nomEnp }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Domaine d'activiter :</b></label>
+                      <label class="text-danger">{{ user.domaineAct }}</label>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="">
+                      <label class=""><b class="text-info">Responsable :</b></label>
+                      <label class="text-danger">{{ user.login }}</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Email :</b></label>
+                      <label class="text-danger">{{ user.email }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Adresse :</b></label>
+                      <label class="text-danger">{{ user.adresse }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Site Web :</b></label>
+                      <label class="text-danger">{{ user.domaineAct }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Numéro de télèphone :</b></label>
+                      <label class="text-danger">{{ user.numtel }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Domain d'activité:</b></label>
+                      <label class="text-danger">{{ user.numtel }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating"><b class="text-info">Catégorie :</b></label>
+                      <label class="text-danger">{{ user.categorie }}</label>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                
+               <a  [routerLink]="['/dashboard/qui-s']"  routerLinkActive="active"  class="btn btn-rose pull-right">
+                Complitè votre Profile
+               </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-profile">
+            <div class="card-avatar">
+              <a href="#pablo">
+                <img class="img" src="./assets/img/placeholder.jpg" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h6 class="card-category text-gray">Bienvenu</h6>
+              <h4 class="card-title">Au Salon des entreprises</h4>
+              <p class="card-description">
+                SDE ou ‘’ Salon des Entreprise’’ est un salon virtuel qui englobe toutes les sociétés Tunisiennes, c’est en quelques sorte un annuaire d’entreprises mais avec plus de fonctionnalités…
+              </p>
+              <a  [routerLink]="['/dashboard/qui-s']" class="nav-link"> 
+                <span  class="btn btn-rose btn-round">Qui Somme Nous</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

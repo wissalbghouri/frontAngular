@@ -1,0 +1,95 @@
+
+<div class="wrapper wrapper-full-page">
+    <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('./assets/img/register.jpg'); background-size: cover; background-position: top center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="card card-signup">
+              <h2 class="card-title text-center">List D'entreprises</h2>
+              <div class="card-body" >
+                <div class="row">
+                    <div class="col-md-4"><div class="card-body"></div></div></div>
+                    <div class="row">
+                        <div class="col-md-4"><div class="card-body"></div></div></div>
+                
+                <div class="row">
+
+                  <div class="col-md-4"  *ngFor="let user of users">
+                    <div class="card card-product">
+                      <div class="card-header card-header-image" data-header-animation="true">
+                        <a href="#pablo">
+                          <img class="img" src="./assets/img/pp.png">
+                        </a>
+                      </div>
+                      <div class="card-body">
+                        <div class="card-actions text-center" >
+                          <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+                            <i class="material-icons">build</i> Fix Header!
+                          </button>
+                          <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="View" [matTooltipPosition]="'below'">
+                            <i class="material-icons">art_track</i>
+                          </button>
+                          <button mat-raised-button type="button" class="btn btn-success btn-link" matTooltip="Edit" [matTooltipPosition]="'below'">
+                            <i class="material-icons">edit</i>
+                          </button>
+                          <button mat-raised-button type="button" class="btn btn-danger btn-link" matTooltip="Remove" [matTooltipPosition]="'below'">
+                            <i class="material-icons">close</i>
+                          </button>
+                        </div>
+                        <h4 class="card-title">
+                          <a href="#pablo">{{ user.nomEnp }}</a>
+                        </h4>
+                        <div class="card-title">
+                            <p class="text-info">  <i class="material-icons">category</i> {{ user.domaineAct }}</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="" >
+                          <h4><i class="material-icons">mail</i> {{user.email}}</h4>
+                        </div>
+                        <div class="stats">
+                          <p class="text-success"><i class="material-icons">perm_phone_msg</i>{{user.numtel}}  </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div></div>
+
+
+                 
+
+
+
+                
+                
+               
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="container">
+          <nav class="pull-left">
+            <ul>
+             
+             
+            
+              
+            </ul>
+          </nav>
+          <div class="copyright pull-right">
+            &copy;
+          {{test | date: 'yyyy'}}, Créée <i class="material-icons">favorite</i> Par
+            <a href="https://www.creative-tim.com" target="_blank">Bghouri Wissal</a>ET Chayma Khemiri .
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  

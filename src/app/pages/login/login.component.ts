@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
     private nativeElement: Node;
+    error:boolean
+    
+
 
     constructor(private element: ElementRef,private http:HttpClient) {
         this.nativeElement = element.nativeElement;
@@ -22,6 +25,9 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {
+
+     this.error=false
+
         var navbar : HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
         const body = document.getElementsByTagName('body')[0];
@@ -76,9 +82,10 @@ console.log(resultat);
                   
         },
         (error) => {
+            this.error=true
 
           
-            console.log(error);
+            //console.log(error);
           
         })
 

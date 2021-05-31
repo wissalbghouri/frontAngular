@@ -12,55 +12,51 @@
               </h4>
             </div>
             <div class="card-body">
-              <form>
+              <form class="form" #appelOffre="ngForm" (ngSubmit)="add(appelOffre)" >
                 <div class="row">
                   
                   <div class="col-md-8">
                     <div class="form-group">
                       
-                      <input type="email"   value="Titre" class="form-control">
+                      <input type="text"  name="titre" #titre="ngModel" ngModel   placeholder="Titre" class="form-control">
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  
-                 
-                </div>
-                <div class="row">
-                  
-                </div>
-                <div class="row">
-                    <div class="col-md-8 mr-auto">
+
+                  <div class="col-md-8 mr-auto">
                   
                     <mat-form-field >
                         
-                        <input matInput [matDatepicker]="picker" placeholder="Date de dèbut d'Appelle d'offre" (click)="picker.open()">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field></div>
-                  
-                </div>
-                <div class="row">
+                        <input matInput [matDatepicker]="picker1" name="datedebut" #datedebut="ngModel" ngModel  placeholder="Date de dèbut d'Appelle d'offre" (click)="picker.open()">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+
+            
                     <div class="col-md-8 mr-auto">
                   
-                    <mat-form-field >
-                        <input matInput [matDatepicker]="picker" placeholder="Date de fin d'Appelle d'offre" (click)="picker.open()">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field></div>
-                  
-                </div>
-                <div class="row">
-                  <div class="col-md-8">
-                    <div class="form-group">
-                      
-                      <div class="form-group">
-                        <label class="bmd-label-floating"> Description:</label>
-                        <textarea class="form-control"  rows="5"></textarea>
+                      <mat-form-field >
+                          
+                          <input matInput [matDatepicker]="picker" name="datefin" #datefin="ngModel" ngModel  placeholder="Date fin d'Appelle d'offre" (click)="picker.open()">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
                       </div>
-                    </div>
-                  </div>
+  
+                        <div class="col-md-8">
+                          <div class="form-group">
+                            
+                            <div class="form-group">
+                              <label class="bmd-label-floating"> Description:</label>
+                              <textarea class="form-control"  name="description" #description="ngModel" ngModel  rows="5"></textarea>
+                            </div>
+                          </div>
+                        </div>
+
                 </div>
+
+  
+     
                 <button mat-raised-button type="submit" class="btn btn-rose pull-right">Ajouter</button>
                 <div class="clearfix"></div>
               </form>

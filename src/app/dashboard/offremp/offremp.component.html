@@ -1,0 +1,82 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <i class="material-icons">work</i>
+              </div>
+              <h4 class="card-title">Ajouter Un Offre d'emploi
+              
+              </h4>
+            </div>
+            <div class="card-body">
+              <form class="form" #offredemploi="ngForm" (ngSubmit)="add(offredemploi)" >
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                          
+                          <input type="text"  name="local" #local="ngModel" ngModel   placeholder="Nom de l'entreprise" class="form-control">
+                        </div>
+                      </div>
+                  
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="titreauposte" #titreauposte="ngModel" ngModel   placeholder="Titre au poste" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="nombreposte" #nombreposte="ngModel" ngModel   placeholder="Nombre de poste" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="region" #region="ngModel" ngModel   placeholder="Région" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="adresse" #adresse="ngModel" ngModel   placeholder="Adresse de recrutement" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="secteurenp" #secteurenp="ngModel" ngModel   placeholder="Secteur d'entreprise" class="form-control">
+                    </div>
+                  </div>
+
+                  
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="salaire" #salaire="ngModel" ngModel   placeholder="Salaire" class="form-control">
+                    </div>
+                  </div>
+
+            
+                   
+  
+                       
+
+                </div>
+
+  
+     
+                <button mat-raised-button type="submit" class="btn btn-rose pull-right">Ajouter</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  

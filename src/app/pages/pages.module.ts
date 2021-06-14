@@ -12,6 +12,9 @@ import { PricingComponent } from './pricing/pricing.component';
 import { LockComponent } from './lock/lock.component';
 import { LoginComponent } from './login/login.component';
 import { ListComponent } from './list/list.component';
+import { OffreemploiComponent } from './offreemploi/offreemploi.component';
+import { ListformationComponent } from './listformation/listformation.component';
+import { EntreprisedialogComponent } from './entreprisedialog/entreprisedialog.component';
 
 @NgModule({
   imports: [
@@ -26,7 +29,10 @@ import { ListComponent } from './list/list.component';
     RegisterComponent,
     PricingComponent,
     LockComponent,
-    ListComponent
+    ListComponent,
+    OffreemploiComponent,
+    ListformationComponent,
+    EntreprisedialogComponent
   ]
 })
 

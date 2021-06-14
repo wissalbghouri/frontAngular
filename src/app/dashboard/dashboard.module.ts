@@ -10,6 +10,9 @@ import { DashboardRoutes } from './dashboard.routing';
 
 import { QuiSComponent } from './qui-s/qui-s.component';
 import { AppoffreComponent } from './appoffre/appoffre.component';
+import { ListappComponent } from './listapp/listapp.component';
+import { OffrempComponent } from './offremp/offremp.component';
+import { FormationComponent } from './formation/formation.component';
 
 
 @NgModule({
@@ -20,7 +23,7 @@ import { AppoffreComponent } from './appoffre/appoffre.component';
         MdModule,
         MaterialModule
     ],
-    declarations: [DashboardComponent,  QuiSComponent, AppoffreComponent]
+    declarations: [DashboardComponent,  QuiSComponent, AppoffreComponent, ListappComponent, OffrempComponent, FormationComponent]
 })
 
 export class DashboardModule {}

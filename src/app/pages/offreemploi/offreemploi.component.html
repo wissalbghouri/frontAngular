@@ -1,0 +1,85 @@
+
+<div class="wrapper wrapper-full-page">
+    <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('./assets/img/register.jpg'); background-size: cover; background-position: top center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="card card-signup">
+              <h2 class="card-title text-center">Liste d'offres d'emplois</h2>
+              <div class="card-body" >
+                <div class="row">
+                    <div class="col-md-4"><div class="card-body"></div></div></div>
+                    <div class="row">
+                        <div class="col-md-4"><div class="card-body"></div></div></div>
+                
+                <div class="row">
+
+                  <div class="col-md-4" *ngFor="let user of users" >
+                    <div class="card card-product">
+                      <div class="card-header card-header-image" data-header-animation="true">
+                        <a href="#pablo">
+                          <img class="img" src="./assets/img/nj.png">
+                        </a>
+                      </div>
+                     
+                      <div class="card-body">
+                       
+                        <h4 class="card-title">
+                          <a href="#pablo"></a>
+                        </h4>
+                        
+                        <div class="card-title">
+                          <h3> <p class="text-info">  {{ user.local }}</p></h3>
+                           <b><label>Poste:</label> <p class="text-dark">  {{ user.titreauposte }}</p></b>
+                           <b><label> Nombre de poste:</label> <p class="text-dark">  {{ user.nombreposte }}</p></b>
+                           <b><label>Domaine:</label> <p class="text-dark">  {{ user.secteurenp }}</p></b>
+                          <b><label>Salaire:</label><p class="text-dark">  {{ user.salaire }}</p></b>
+                        <b><label>Region:</label><p class="text-dark">  {{ user.region }}</p></b>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="" >
+                          <p><label>Adresse de recrutement:</label>{{ user.adresse }}</p>
+                        </div>
+                        <div class="stats">
+                          <p class="text-success"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div></div>
+
+
+                 
+
+
+
+                
+                
+               
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="container">
+          <nav class="pull-left">
+            <ul>
+             
+             
+            
+              
+            </ul>
+          </nav>
+         
+        </div>
+      </footer>
+    </div>
+  </div>
+  

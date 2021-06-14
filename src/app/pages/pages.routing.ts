@@ -5,6 +5,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { LockComponent } from './lock/lock.component';
 import { LoginComponent } from './login/login.component';
 import { ListComponent } from './list/list.component';
+import { OffreemploiComponent } from './offreemploi/offreemploi.component';
+import { ListformationComponent } from './listformation/listformation.component';
 
 export const PagesRoutes: Routes = [
 
@@ -29,6 +31,16 @@ export const PagesRoutes: Routes = [
         , {
             path: 'list',
             component: ListComponent
+        }
+        , {
+            path: 'offreemploi',
+            component: OffreemploiComponent
+        }
+
+
+        , {
+            path: 'listformation',
+            component: ListformationComponent
         }
     
     

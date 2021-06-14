@@ -44,6 +44,8 @@ export class WizardComponent implements OnInit, OnChanges, AfterViewInit {
     {value: 'Etatique', viewValue: 'Etatique'},
    
   ];
+  selectFile = null
+
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -408,11 +410,20 @@ isFieldValid(form: FormGroup, field: string) {
      // alert('bonjour')
    // console.log(formP.form.value);
     let formValue :any
+    formP.form.value.image = this.selectFile.name
     formValue = formP.form.value
-    formValue.idUser = localStorage.getItem('userId')
     console.log(formValue);
     
-    return   this.http.post(environment.address_symfony+'editProfil',formP.form.value).subscribe(
+    formValue.idUser = localStorage.getItem('userId')
+   // console.log(formValue);
+    const fd= new FormData();
+    fd.append('image', this.selectFile,this.selectFile.name);
+
+    this.http.post(environment.address_symfony+'picture/new', fd).subscribe(res=> {
+        console.log(res)
+      });
+    
+      this.http.post(environment.address_symfony+'editProfil',formP.form.value).subscribe(
         (data : any) => {
      
                   
@@ -424,4 +435,9 @@ isFieldValid(form: FormGroup, field: string) {
         })
     
   }
+  onFileSelect(file){
+          this.selectFile=<File>file.target.files[0];
+    console.log( this.selectFile);
+    
+}
 }

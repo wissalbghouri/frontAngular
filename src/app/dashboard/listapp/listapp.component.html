@@ -1,0 +1,72 @@
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+
+
+<center><h2>Liste d'appelle d'offres</h2></center>
+
+
+
+
+<div class="row">
+  <div class="col-md-4"><div class="card-body"></div></div></div>
+  <div class="row">
+      <div class="col-md-4"><div class="card-body"></div></div></div>
+      <div class="row">
+        <div class="col-md-4"><div class="card-body"></div></div></div>
+        <div class="row">
+            <div class="col-md-4"><div class="card-body"></div></div></div>
+<div class="row">
+
+<div class="col-md-4" *ngFor="let user of users">
+    <div class="card card-product">
+      <div class="card-header card-header-image" data-header-animation="true">
+        <a href="#pablo">
+          <img class="img" src="./assets/img/nn.jpg">
+        </a>
+      </div>
+      <div class="card-body">
+        <div class="card-actions text-center">
+          <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+            <i class="material-icons">build</i> Fix Header!
+          </button>
+          <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="View" [matTooltipPosition]="'below'">
+            <i class="material-icons">art_track</i>
+          </button>
+          <button mat-raised-button type="button" class="btn btn-success btn-link" matTooltip="Edit" [matTooltipPosition]="'below'">
+            <i class="material-icons">edit</i>
+          </button>
+          <button mat-raised-button type="button" class="btn btn-danger btn-link" matTooltip="Remove" [matTooltipPosition]="'below'">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <h4 class="card-title">
+          <a href="#pablo">{{ user.titre }}</a>
+        </h4>
+        <div class="card-description" >
+          {{ user.description }}        </div>
+      </div>
+      <div class="card-footer" >
+        
+       
+          <h6  class="text-success">{{ user.dateDebut }}</h6>
+        
+        <div class="stats">
+          <h6 class="text-danger"> {{ user.dateFin }}</h6>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,78 @@
+
+<div class="wrapper wrapper-full-page">
+    <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('./assets/img/register.jpg'); background-size: cover; background-position: top center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="card card-signup">
+              <h2 class="card-title text-center">Liste des formation</h2>
+              <div class="card-body" >
+                <div class="row">
+                    <div class="col-md-4"><div class="card-body"></div></div></div>
+                    <div class="row">
+                        <div class="col-md-4"><div class="card-body"></div></div></div>
+                
+                <div class="row">
+
+                  <div class="col-md-4" *ngFor="let formation of formations" >
+                    <div class="card card-product">
+                      <div class="card-header card-header-image" data-header-animation="true">
+                        <a href="#pablo">
+                          <img class="img" src="https://localhost:8000/uploads/{{formation.entreprise?.logo}}">
+                        </a>
+                      </div>
+                     
+                      <div class="card-body">
+                       
+                        <h4 class="card-title">
+                          <a href="#pablo"></a>
+                        </h4>
+                        
+                        <div class="card-title" >
+                          <h3> <p class="text-info"> {{ formation.nom_enp }} </p></h3>
+                           <b><label></label> <p class="text-dark"> {{ user.titre }} </p></b>
+                           <b><label> Domaine:</label> <p class="text-dark"> {{ formation.domaine }} </p></b>
+                           <b><label>Formateur:</label> <p class="text-dark"> {{ formation.formateur }} </p></b>
+                          <b><label>Prix:</label><p class="text-dark"> {{ formation.prix }} </p></b>
+                      
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div></div>
+
+
+                 
+
+
+
+                
+                
+               
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="container">
+          <nav class="pull-left">
+            <ul>
+             
+             
+            
+              
+            </ul>
+          </nav>
+         
+        </div>
+      </footer>
+    </div>
+  </div>
+  

@@ -48,7 +48,7 @@
                                 <span class="btn btn-round btn-rose btn-file">
                                     <span class="fileinput-new">Ajouter Photo</span>
                                     <span class="fileinput-exists">Changer</span>
-                                    <input type="file" name="..." name="logo" #logo="ngModel" ngModel  />
+                                    <input type="file" (change)="onFileSelect($event)"  name="logo" #logo="ngModel" ngModel  />
                                 </span>
                                 <br />
                                 <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Supprimer</a>

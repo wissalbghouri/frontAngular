@@ -1,0 +1,73 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <i class="material-icons">account_balance</i>
+              </div>
+              <h4 class="card-title">Ajouter Un Offre d'emploi
+              
+              </h4>
+            </div>
+            <div class="card-body">
+              <form class="form" #formation="ngForm" (ngSubmit)="add(formation)" >
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                          
+                          <input type="text"  name="nom_enp" #nom_enp="ngModel" ngModel   placeholder="Nom de l'entreprise" class="form-control">
+                        </div>
+                      </div>
+                  
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="titre" #titre="ngModel" ngModel   placeholder="Titre " class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="domaine" #domaine="ngModel" ngModel   placeholder="Domaine" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="formateur" #formateur="ngModel" ngModel   placeholder="Formateur" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                      <input type="text"  name="prix" #prix="ngModel" ngModel   placeholder="Prix" class="form-control">
+                    </div>
+                  </div>
+                  
+
+                  
+                 
+
+            
+                   
+  
+                       
+
+                </div>
+
+  
+     
+                <button mat-raised-button type="submit" class="btn btn-rose pull-right">Ajouter</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+

@@ -3,7 +3,7 @@
     <div class="navbar-wrapper">
       <a class="navbar-brand d-none d-sm-none d-md-block" [routerLink]="['/dashboard']"><span class="material-icons">
         sync_alt
-        </span>Salons Des Entreprises</a>
+        </span>S_D_E</a>
       
     </div>
     <button mat-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
@@ -32,6 +32,16 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/pages/list']">
             <i class="material-icons">business</i> Entreprises
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/pages/offreemploi']">
+            <i class="material-icons">work</i> Offres d'emplois
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/pages/listformation']">
+            <i class="material-icons">account_balance</i> Formation
           </a>
         </li>
       </ul>

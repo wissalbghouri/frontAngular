@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import{environment} from '../../../environments/environment';
-
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import{EntreprisedialogComponent} from '../entreprisedialog/entreprisedialog.component'
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -14,7 +15,8 @@ export class ListComponent implements OnInit {
   message = ""
   users :any[]
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    public dialog: MatDialog
     ) { 
       this.http.get(environment.address_symfony+'getusers').subscribe(
         
@@ -41,5 +43,20 @@ export class ListComponent implements OnInit {
     body.classList.remove('register-page');
     body.classList.remove('off-canvas-sidebar');
   }
+  showFormation(){
+  }
 
+
+  openDialog(user) {
+   // console.log(us);
+    
+    this.dialog.open(EntreprisedialogComponent, {
+      width: '500px',
+
+      data: {
+
+        entreprise: user
+      }
+    }); 
+  }
 }

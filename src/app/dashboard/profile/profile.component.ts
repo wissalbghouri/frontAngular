@@ -16,6 +16,7 @@ user ={
  adresse:"",
  siteweb:"",
  numtel:"",
+ logo:"",
  
  categorie:"",
 }
@@ -33,6 +34,7 @@ user ={
             this.user.siteweb = resultat.siteweb
             this.user.numtel = resultat.numtel
             this.user.categorie = resultat.categorie
+            this.user.logo = resultat.logo
             
 
       this.user.email = resultat.username
